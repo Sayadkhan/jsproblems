@@ -3,9 +3,7 @@ function waitingTime(waitingTimes, serialNumber) {
     return "Invalid Input";
   }
 
-  const totalTime = waitingTimes.reduce((prev, current) => {
-    prev + current;
-  }, 0);
+  const totalTime = waitingTimes.reduce((prev, current) => prev + current, 0);
   const averageTime = Math.round(totalTime / waitingTimes.length);
 
   const remainingPeople = serialNumber - waitingTimes.length - 1;
@@ -14,5 +12,7 @@ function waitingTime(waitingTimes, serialNumber) {
     return 0;
   }
 
-  return remainingPeople * averageTime;
+  const sum = remainingPeople * averageTime;
+
+  return sum;
 }

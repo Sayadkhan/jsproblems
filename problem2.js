@@ -14,3 +14,5 @@ function sendNotification(email) {
 
   return `${username} sent you an email from ${domainName}`;
 }
+
+console.log(sendNotification("abc@gamil.com"));
